@@ -1,18 +1,18 @@
 echo -e "The following values are required for configuration of dhcpd.\n"
 echo "Input subnet address (ex. 192.168.5.0): "
-read $SUBNET
+read SUBNET
 echo "Input network mask (ex. 255.255.255.0): "
-read $NETMASK
+read NETMASK
 echo "Input DHCP range start (ex. 192.168.5.38): "
-read $RANGESTART
+read RANGESTART
 echo "Input DHCP range end (ex. 192.168.5.243): "
-read $RANGEEND
+read RANGEEND
 echo "Input gateway address (ex. 192.168.5.1): "
-read $ROUTER1
+read ROUTER1
 echo "Input DNS server address (ex. 192.168.5.1): "
-read $DNS1
+read DNS1
 echo "Input IP address of PXE server (this server, ex. 192.168.5.2): "
-read $PXEIP
+read PXEIP
 
 dnf install -y syslinux tftp-server xinetd dhcp-server httpd
 mkdir /tftpboot
