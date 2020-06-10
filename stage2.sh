@@ -45,6 +45,7 @@ sed -i "s/DNS1/$DNS1/g" /etc/dhcp/dhcpd.conf
 sed -i "s/PXEIP/$PXEIP/g" /etc/dhcp/dhcpd.conf
 
 /bin/cp -rf ./tftp /etc/xinetd.d/tftp
+/bin/cp -rf ./default /tftpboot/pxelinux.cfg/default
 cat /root/anaconda-ks.cfg | sed 's/repo/# repo/g' > /var/www/html/anaconda-ks.cfg
 echo "reboot" >> /var/www/html/anaconda-ks.cfg
 chmod ugo+r /var/www/html/anaconda-ks.cfg
