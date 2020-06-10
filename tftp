@@ -1,4 +1,4 @@
-service ftp
+service tftp
 {
 disable         = no
 socket_type     = dgram
