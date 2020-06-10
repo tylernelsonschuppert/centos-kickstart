@@ -55,7 +55,6 @@ cat /root/anaconda-ks.cfg | sed 's/repo/# repo/g' > /var/www/html/anaconda-ks.cf
 echo "reboot" >> /var/www/html/anaconda-ks.cfg
 chmod ugo+r /var/www/html/anaconda-ks.cfg
 
-chmod 775 -R /tftpboot
 systemctl enable tftp
 systemctl enable xinetd
 systemctl enable dhcpd
