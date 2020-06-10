@@ -1,0 +1,10 @@
+default menu.c32
+prompt 1
+timeout 30
+
+menu title ########## PXE Boot Menu ##########
+
+label 1
+menu label ^1) Install CentOS 8-Stream
+kernel images/centos/x86_64/8-Stream/vmlinuz
+append initrd=images/centos/x86_64/8-Stream/initrd.img method=http://reflector.westga.edu/repos/CentOS/8-stream/BaseOS/x86_64/os ks=http://192.168.5.2/anaconda-ks.cfg
