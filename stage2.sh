@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -e "The following values are required for configuration of dhcpd.\n"
 echo "Input subnet address (ex. 192.168.5.0): "
 read SUBNET

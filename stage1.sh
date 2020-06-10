@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Please input hostname to set for this server (ex. centos-1.local.tylernelsonschuppert.com): "
 read HOST
 echo "Please input static IP to set for this server (ex. 192.168.5.2): "
