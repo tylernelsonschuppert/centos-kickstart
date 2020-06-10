@@ -24,6 +24,11 @@ cp /usr/share/syslinux/mboot.c32 /tftpboot
 cp /usr/share/syslinux/chain.c32 /tftpboot
 cp /usr/share/syslinux/ldlinux.c32 /tftpboot
 cp /usr/share/syslinux/libutil.c32 /tftpboot
+cp /usr/share/syslinux/gptmbr.bin /tftpboot
+cp /usr/share/syslinux/gptmbr_c.bin /tftpboot
+cp /usr/share/syslinux/gptmbr_f.bin /tftpboot
+cp /usr/share/syslinux/cat.c32 /tftpboot
+
 mkdir /tftpboot/pxelinux.cfg
 mkdir -p /tftpboot/images/centos/x86_64/8-Stream
 wget http://ftp.ussg.iu.edu/linux/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20191219-boot.iso
