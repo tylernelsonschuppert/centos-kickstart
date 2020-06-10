@@ -35,7 +35,7 @@ umount /root/CentOS-Stream-8-x86_64-20191219-boot.iso
 rm -rf ./mount-iso
 rm -rf ./CentOS-Stream-8-x86_64-20191219-boot.iso 
 
-/bin/cp -rf ./centos-kickstart/dhcpd.conf /etc/dhcp/dhcpd.conf
+/bin/cp -rf ./dhcpd.conf /etc/dhcp/dhcpd.conf
 sed -i "s/SUBNET/$SUBNET/g" /etc/dhcp/dhcpd.conf
 sed -i "s/NETMASK/$NETMASK/g" /etc/dhcp/dhcpd.conf
 sed -i "s/RANGESTART/$RANGESTART/g" /etc/dhcp/dhcpd.conf
@@ -44,7 +44,7 @@ sed -i "s/ROUTER1/$ROUTER1/g" /etc/dhcp/dhcpd.conf
 sed -i "s/DNS1/$DNS1/g" /etc/dhcp/dhcpd.conf
 sed -i "s/PXEIP/$PXEIP/g" /etc/dhcp/dhcpd.conf
 
-/bin/cp -rf ./centos-kickstart/tftp /etc/xinetd.d/tftp
+/bin/cp -rf ./tftp /etc/xinetd.d/tftp
 cat anaconda-ks.cfg | sed 's/repo/# repo/g' > /var/www/html/anaconda-ks.cfg
 echo "reboot" >> /var/www/html/anaconda-ks.cfg
 chmod ugo+r /var/www/html/anaconda-ks.cfg
