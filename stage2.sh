@@ -31,7 +31,7 @@ mkdir mount-iso
 mount ./CentOS-Stream-8-x86_64-20191219-boot.iso ./mount-iso/ -o loop
 cp ./mount-iso/images/pxeboot/initrd.img /tftpboot/images/centos/x86_64/8-Stream/
 cp ./mount-iso/images/pxeboot/vmlinuz /tftpboot/images/centos/x86_64/8-Stream/
-umount ./CentOS-Stream-8-x86_64-20191219-boot.iso
+umount ./mount-iso
 rm -rf ./mount-iso
 rm -rf ./CentOS-Stream-8-x86_64-20191219-boot.iso 
 
