@@ -13,6 +13,6 @@ read DNS1
 dnf update -y
 echo $HOST > /etc/hostname
 sed -i 's/dhcp/none/g' /etc/sysconfig/network-scripts/ifcfg-ens192
-echo -e "IPADDR=$HOSTNAME\nPREFIX=$PREFIX\nGATEWAY=$GATEWAY\nDNS1=$DNS1\n" >> /etc/sysconfig/network-scripts/ifcfg-ens192 
+echo -e "IPADDR=$IPADDR\nPREFIX=$PREFIX\nGATEWAY=$GATEWAY\nDNS1=$DNS1\n" >> /etc/sysconfig/network-scripts/ifcfg-ens192 
 systemctl stop firewalld
 systemctl disable firewalld
