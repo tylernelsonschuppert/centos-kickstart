@@ -31,7 +31,7 @@ mkdir mount-iso
 mount ./CentOS-Stream-8-x86_64-20191219-boot.iso ./mount-iso/ -o loop
 cp ./mount-iso/images/pxeboot/initrd.img /tftpboot/images/centos/x86_64/8-Stream/
 cp ./mount-iso/images/pxeboot/vmlinuz /tftpboot/images/centos/x86_64/8-Stream/
-umount /root/CentOS-Stream-8-x86_64-20191219-boot.iso
+umount ./CentOS-Stream-8-x86_64-20191219-boot.iso
 rm -rf ./mount-iso
 rm -rf ./CentOS-Stream-8-x86_64-20191219-boot.iso 
 
@@ -45,7 +45,7 @@ sed -i "s/DNS1/$DNS1/g" /etc/dhcp/dhcpd.conf
 sed -i "s/PXEIP/$PXEIP/g" /etc/dhcp/dhcpd.conf
 
 /bin/cp -rf ./tftp /etc/xinetd.d/tftp
-cat anaconda-ks.cfg | sed 's/repo/# repo/g' > /var/www/html/anaconda-ks.cfg
+cat /root/anaconda-ks.cfg | sed 's/repo/# repo/g' > /var/www/html/anaconda-ks.cfg
 echo "reboot" >> /var/www/html/anaconda-ks.cfg
 chmod ugo+r /var/www/html/anaconda-ks.cfg
 systemctl enable tftp
