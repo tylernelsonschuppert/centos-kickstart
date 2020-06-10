@@ -49,6 +49,8 @@ sed -i "s/PXEIP/$PXEIP/g" /etc/dhcp/dhcpd.conf
 cat /root/anaconda-ks.cfg | sed 's/repo/# repo/g' > /var/www/html/anaconda-ks.cfg
 echo "reboot" >> /var/www/html/anaconda-ks.cfg
 chmod ugo+r /var/www/html/anaconda-ks.cfg
+
+chmod 775 -R /tftpboot
 systemctl enable tftp
 systemctl enable xinetd
 systemctl enable dhcpd
